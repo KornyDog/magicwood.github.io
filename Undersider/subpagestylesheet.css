@@ -96,6 +96,7 @@ body { /*bakgrunns farge/bilde plus all tekst i <body>*/
 
 
 .grid { /* || Grid oppsettet || */
+    min-height: 85vh;
     display: grid;
     grid-gap: 6px; /* åpenrom mellom grid boksene */
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* 6 columns */
