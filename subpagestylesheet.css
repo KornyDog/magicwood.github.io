@@ -241,14 +241,44 @@ p1 {
 
 @media (max-width:916px) { /*forrander på CSS elementer når skjermstørrelsen blir mindre en 575px */
 
-
-    body {
-        background-color: lime;
+    .grid { /* || Grid oppsettet || */
+        display: grid;
+        grid-gap: 6px; /* åpenrom mellom grid boksene */
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* 6 columns */
+        grid-template-rows: 60px 1fr 60px 1fr 60px 1fr 42px;     /* 5 rows */
+                                                        /*  øverst og nederest row har en sett størrelse
+                                                            row 2 øker og minker seg for å passe innholdet i seg
+                                                            row 3 og 4 tar opp like mye av resten av plassen
+            */
+    
+        grid-template-areas:  /* Dette område kan stokkes rundt på som et pusslespill med mange løsninger */
+        "desc1 desc1 desc1 desc1 desc1 desc1"  /* row 1 */
+        "content1 content1 content1 content1 content1 content1"   /* row 2 */
+        "desc2 desc2 desc2 desc2 desc2 desc2"  /* row 3 */
+        "content2 content2 content2 content2 content2 content2"   /* row 4 */
+        "desc3 desc3 desc3 desc3 desc3 desc3"  /* row 5 */
+        "content3 content3 content3 content3 content3 content3"   /* row 6 */
+    
+    
+        ". footer footer footer footer .";  /* last row 7 */
+    
     }
+
 
     iframe {
         max-width: 336px;
         max-height: 189px;
+    }
+
+
+    .description1 {
+        margin-top: 18px;
+    }
+    .description2 {
+        margin-top: 18px;
+    }
+    .description3 {
+        margin-top: 18px;
     }
 
 
