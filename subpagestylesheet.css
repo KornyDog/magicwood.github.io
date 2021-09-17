@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img { /* alt som har med img taggen å gjøre (bilder) */
+    /* får en border i en kremgul farge */
+    border-style: solid;
+    border-color: #007060;
+    border-radius: 5%;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+
+header { /* linje øverst på siden */
+    background-color: #292929;
+    color: white;
+    padding-bottom: 100px; /* Åpentrom mellom elementer og nedre    kanten på div-en */
+    margin-bottom: 6px;
+    text-align: left; /* Innholdet legger seg helt til venstre */
+    padding-left: 36px; /* Åpentrom mellom elementer og venstrekanten på div-en */
+    position: relative;
+}
+
+header span {
+    position: absolute;
+    bottom: 34%;
+}
+
+
+.navbar {
+    size: 20px;
+    overflow:hidden;
+}
+
+.navbar span {
+    position: absolute;
+    bottom: 20%;
+    right: 0%;
+
+}
+
+.dropbtn {
+    background-color: #007060; /*Bakgrunnsfarge*/
+    color: white; /*Skriftfarge*/
+    padding: 16px; 
+    font-size: 16px; /*skriftsstørrelse*/
+    border: none; /*Fjerner rammen rundt*/
+    cursor: pointer; /*Gjør at musepekeren blir en hand*/
+    border-radius: 5px; /*Avrunnede hjørner */
+    margin-right: 40px;
+    text-decoration: underline;
+}
+.dropbtn:hover { /* hvordan dropdown knappen ser ut når pekeren er over den */
+    border-radius: 0px;
+    background-color: #441816;
+}
+
+.dropdown { 
+    float:right; /* Gjør at alle dropdown knapper ligger ved siden av hverandre */ 
+}
+
+.dropdown-content{
+    display: none; /* vises ikke til hover er aktivert */
+    position:absolute;/* relativ gjør at den strekker grid-en den er i . absolutt legger den over*/
+    background-color: #007060;
+    z-index: 1; /* Legger den over andre deler */
+    border-radius: 5px; /*Avrunnede hjørner */
+}
+
+
+.home a:hover {background-color: #441816;
+    border-radius: 0px; /*Avrunnede hjørner */
+
+}
+
+.dropdown-content a { /* referer til "a" i html som blir brukt: <a href="[Link]">[Tekst som vises]</a> */
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none; /* Denne overstyrer hvordan Dropbtn blir stilsatt når det har noe med "a" å gjøre */
+    display:block;
+}
+.dropdown-content a:hover {background-color: #441816;
+    border-radius: 0px; /*Avrunnede hjørner */
+}
+.dropdown:hover .dropdown-content {
+    display:block;
+    
+}
+
+body { /*bakgrunns farge/bilde plus all tekst i <body>*/
+    /*
+    background-image: url("ProjOne1.0/ProjOneImg/repeatable_background.png"); */
+    background-color: #441816;
+    color: white;
+}
+
+
+.grid { /* || Grid oppsettet || */
+    display: grid;
+    grid-gap: 6px; /* åpenrom mellom grid boksene */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* 6 columns */
+    grid-template-rows: 1fr 1fr 1fr 42px;     /* 5 rows */
+                                                    /*  øverst og nederest row har en sett størrelse
+                                                        row 2 øker og minker seg for å passe innholdet i seg
+                                                        row 3 og 4 tar opp like mye av resten av plassen
+        */
+
+    grid-template-areas:  /* Dette område kan stokkes rundt på som et pusslespill med mange løsninger */
+    ". desc1 content1 content1 content1 ."  /* row 1 */
+    ". content2 content2 content2 desc2 ."   /* row 2 */
+    ". desc3 content3 content3 content3 ."   /* row 3 */
+
+
+    ". footer footer footer footer .";  /* last row 4 */
+
+}
+
+
+.description1 { /* liten tekst boks */
+    grid-area: desc1;    /* plasseres på "desc1" i grid-template-areas */
+    text-align: center; /* Midtstilt tekst */
+    padding: 25%;
+}
+
+.description2 { /* liten tekst boks */
+    grid-area: desc2;    /* plasseres på "desc2" i grid-template-areas */
+    text-align: center; /* Midtstilt tekst */
+    padding: 25%;
+}
+
+.description3 { /* liten tekst boks */
+    grid-area: desc3;    /* plasseres på "desc3" i grid-template-areas */
+    text-align: center; /* Midtstilt tekst */
+    padding: 25%;
+}
+
+
+.content1 {  /* stor tekst boks */
+    grid-area: content1; /* plasseres på "content1" i grid-template-areas */
+    padding: 18px;      /* luft rundt teksten */
+    line-height: 30px;  /* luft mellom linjene i teksten */
+    text-align: center;
+}
+
+.content2 {  /* stor tekst boks */
+    grid-area: content2; /* plasseres på "content2" i grid-template-areas */
+    padding: 18px;      /* luft rundt teksten */
+    line-height: 30px;  /* luft mellom linjene i teksten */
+    text-align: center;
+}
+
+.content3 {  /* stor tekst boks */
+    grid-area: content3; /* plasseres på "content3" i grid-template-areas */
+    padding: 18px;      /* luft rundt teksten */
+    line-height: 30px;  /* luft mellom linjene i teksten */
+    text-align: center;
+}
+
+
+
+.footer {   /* linje nedeserst som lukker siden */
+    color: silver;
+    grid-area: footer;  /* plasseres på "footer" i grid-template-areas */
+    text-align: center; /* midtstiller teksten */
+    position: relative; /* jobber med .footer span nedenfor */
+}
+
+.footer span {  /* Midstiller teksten inni .footer vertikalt */
+    position: absolute;
+    bottom: 30%;
+    right: 0%;
+    left: 0%;
+}
+
+
+p1 {
+    font-size: 16x;
+}
+
+
+
+
+/*|| disse 2 gjør at alle divboksene splittes vekk fra hverandre og det blir ett lite åpentrom mellom de ||*/
+.grid div:nth-child(even)  {  
+    background-color: #111111;
+}
+.grid div:nth-child(odd)  {
+    background-color: #111111;
+}
+
+
+
+
+
+
+/*LETS GOOOOOOOOOO*/
+
+@media (max-width:1100px) { /*forrander på CSS elementer når skjermstørrelsen blir mindre en 800px */
+
+    .grid { /* || Grid oppsettet || */
+        display: grid;
+        grid-gap: 6px; /* åpenrom mellom grid boksene */
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* 6 columns */
+        grid-template-rows: 60px 1fr 60px 1fr 60px 1fr 42px;     /* 5 rows */
+                                                        /*  øverst og nederest row har en sett størrelse
+                                                            row 2 øker og minker seg for å passe innholdet i seg
+                                                            row 3 og 4 tar opp like mye av resten av plassen
+            */
+    
+        grid-template-areas:  /* Dette område kan stokkes rundt på som et pusslespill med mange løsninger */
+        ". desc1 desc1 desc1 desc1 ."  /* row 1 */
+        ". content1 content1 content1 content1 ."   /* row 2 */
+        ". desc2 desc2 desc2 desc2 ."  /* row 3 */
+        ". content2 content2 content2 content2 ."   /* row 4 */
+        ". desc3 desc3 desc3 desc3 ."  /* row 5 */
+        ". content3 content3 content3 content3 ."   /* row 6 */
+    
+    
+        ". footer footer footer footer .";  /* last row 7 */
+    
+    }
+
+    .description1 {
+        padding: 6px;
+    }
+    .description2 {
+        padding: 6px;
+    }
+    .description3 {
+        padding: 6px;
+    }
+    
+
+    
+
+}
+
+@media (max-width:916px) { /*forrander på CSS elementer når skjermstørrelsen blir mindre en 575px */
+
+
+    body {
+        background-color: lime;
+    }
+
+    iframe {
+        max-width: 336px;
+        max-height: 189px;
+    }
+
+
+
+
+
+
+}
+
+@media (max-width:590px) {
+    header span {
+        position: relative; /* Bytter fra absolute til relative position slik at header strekker seg istede for at navbar og tekst går oppå hverandre*/
+        bottom: 34%;
+    }
+
+    h1 {
+        text-align: center; /* flytter tekst fra venstre til midten */
+    }
+}
