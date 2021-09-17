@@ -96,7 +96,6 @@ body { /*bakgrunns farge/bilde plus all tekst i <body>*/
 
 
 .grid { /* || Grid oppsettet || */
-    min-height: 85vh;
     display: grid;
     grid-gap: 6px; /* åpenrom mellom grid boksene */
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* 6 columns */
@@ -120,16 +119,19 @@ body { /*bakgrunns farge/bilde plus all tekst i <body>*/
 .description1 { /* liten tekst boks */
     grid-area: desc1;    /* plasseres på "desc1" i grid-template-areas */
     text-align: center; /* Midtstilt tekst */
+    padding: 25%;
 }
 
 .description2 { /* liten tekst boks */
     grid-area: desc2;    /* plasseres på "desc2" i grid-template-areas */
     text-align: center; /* Midtstilt tekst */
+    padding: 25%;
 }
 
 .description3 { /* liten tekst boks */
     grid-area: desc3;    /* plasseres på "desc3" i grid-template-areas */
     text-align: center; /* Midtstilt tekst */
+    padding: 25%;
 }
 
 
@@ -191,29 +193,26 @@ p1 {
 
 
 
-
-
-
 /*LETS GOOOOOOOOOO*/
 
-@media (max-width:800px) { /*forrander på CSS elementer når skjermstørrelsen blir mindre en 800px */
+@media (max-width:1100px) { /*forrander på CSS elementer når skjermstørrelsen blir mindre en 800px */
 
     .grid { /* || Grid oppsettet || */
         display: grid;
         grid-gap: 6px; /* åpenrom mellom grid boksene */
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* 6 columns */
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 42px;     /* 5 rows */
+        grid-template-rows: 60px 1fr 60px 1fr 60px 1fr 42px;     /* 5 rows */
                                                         /*  øverst og nederest row har en sett størrelse
                                                             row 2 øker og minker seg for å passe innholdet i seg
                                                             row 3 og 4 tar opp like mye av resten av plassen
             */
     
         grid-template-areas:  /* Dette område kan stokkes rundt på som et pusslespill med mange løsninger */
-        ". desc1 desc1 desc1 . ."  /* row 1 */
+        ". desc1 desc1 desc1 desc1 ."  /* row 1 */
         ". content1 content1 content1 content1 ."   /* row 2 */
-        ". . desc2 desc2 desc2 ."  /* row 3 */
+        ". desc2 desc2 desc2 desc2 ."  /* row 3 */
         ". content2 content2 content2 content2 ."   /* row 4 */
-        ". desc3 desc3 desc3 . ."  /* row 5 */
+        ". desc3 desc3 desc3 desc3 ."  /* row 5 */
         ". content3 content3 content3 content3 ."   /* row 6 */
     
     
@@ -221,11 +220,25 @@ p1 {
     
     }
 
+    .description1 {
+        padding: 6px;
+    }
+    .description2 {
+        padding: 6px;
+    }
+    .description3 {
+        padding: 6px;
+    }
+    
+
     
 
 }
 
 @media (max-width:575px) { /*forrander på CSS elementer når skjermstørrelsen blir mindre en 575px */
+
+
+
 
     header span {
         position: relative; /* Bytter fra absolute til relative position slik at header strekker seg istede for at navbar og tekst går oppå hverandre*/
