@@ -6,13 +6,15 @@
 img { /* alt som har med img taggen å gjøre (bilder) */
     /* får en border i en kremgul farge */
     border-style: solid;
-    border-color: #007060;
+    border-color: #20ba90;
     border-radius: 5%;
 }
 
 h2 {
     font-size: 1.3em;
 }
+
+
 
 
 header { /* linje øverst på siden */
@@ -44,8 +46,8 @@ header span {
 }
 
 .dropbtn {
-    background-color: #007060; /*Bakgrunnsfarge*/
-    color: white; /*Skriftfarge*/
+    background-color: #20ba90; /*Bakgrunnsfarge*/
+    color: #441816; /*Skriftfarge*/
     padding: 16px; 
     font-size: 16px; /*skriftsstørrelse*/
     border: none; /*Fjerner rammen rundt*/
@@ -53,10 +55,12 @@ header span {
     border-radius: 5px; /*Avrunnede hjørner */
     margin-right: 40px;
     text-decoration: underline;
+    font-weight: bold;
 }
 .dropbtn:hover { /* hvordan dropdown knappen ser ut når pekeren er over den */
     border-radius: 0px;
     background-color: #441816;
+    color: #20ba90;
 }
 
 .dropdown { 
@@ -66,25 +70,24 @@ header span {
 .dropdown-content{
     display: none; /* vises ikke til hover er aktivert */
     position:absolute;/* relativ gjør at den strekker grid-en den er i . absolutt legger den over*/
-    background-color: #007060;
+    background-color: #20ba90;
     z-index: 1; /* Legger den over andre deler */
     border-radius: 5px; /*Avrunnede hjørner */
 }
 
 
-.home a:hover {background-color: #441816;
-    border-radius: 0px; /*Avrunnede hjørner */
-
-}
 
 .dropdown-content a { /* referer til "a" i html som blir brukt: <a href="[Link]">[Tekst som vises]</a> */
-    color: white;
+    color: #441816;
     padding: 12px 16px;
     text-decoration: none; /* Denne overstyrer hvordan Dropbtn blir stilsatt når det har noe med "a" å gjøre */
     display:block;
+    font-weight: bold;
 }
-.dropdown-content a:hover {background-color: #441816;
+.dropdown-content a:hover {
+    background-color: #441816;
     border-radius: 0px; /*Avrunnede hjørner */
+    color: #20ba90;
 }
 .dropdown:hover .dropdown-content {
     display:block;
@@ -260,15 +263,10 @@ p1 {
         "content3 content3 content3 content3 content3 content3"   /* row 6 */
     
     
-        ". footer footer footer footer .";  /* last row 7 */
+        "footer footer footer footer footer footer";  /* last row 7 */
     
     }
 
-
-
-    body {
-        background-color: lime;
-    }
 
     iframe {
         max-width: 336px;
