@@ -135,6 +135,7 @@ body { /*bakgrunns farge/bilde plus all tekst i <body>*/
     padding: 18px;      /* luft rundt teksten */
     line-height: 30px;  /* luft mellom linjene i teksten */
     text-align: center;
+    font-size: 20px;
 }
 
 
