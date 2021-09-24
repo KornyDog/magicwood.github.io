@@ -6,14 +6,14 @@
 img { /* alt som har med img taggen å gjøre (bilder) */
     /* får en border i en kremgul farge */
     border-style: solid;
-    border-color: #20ba90;
+    border-color: #C09457;
     border-radius: 5%;
 }
 
 
 header { /* linje øverst på siden */
-    background-color: #292929;
-    color: white;
+    background: linear-gradient(15deg, #100500 30%, #606060 70%);
+    color: #e0e0e0;
     padding-bottom: 100px; /* Åpentrom mellom elementer og nedre    kanten på div-en */
     margin-bottom: 6px;
     text-align: left; /* Innholdet legger seg helt til venstre */
@@ -39,8 +39,8 @@ header span {
 }
 
 .dropbtn {
-    background-color: #20ba90; /*Bakgrunnsfarge*/
-    color: #441816; /*Skriftfarge*/
+    background-color: #04492D; /*Bakgrunnsfarge*/
+    color: #c09457; /*Skriftfarge*/
     padding: 16px; 
     font-size: 16px; /*skriftsstørrelse*/
     border: none; /*Fjerner rammen rundt*/
@@ -52,8 +52,8 @@ header span {
 }
 .dropbtn:hover { /* hvordan dropdown knappen ser ut når pekeren er over den */
     border-radius: 0px;
-    background-color: #441816;
-    color: #20ba90;
+    background-color: #C09457;
+    color: #04492D;
 }
 
 .dropdown { 
@@ -63,20 +63,20 @@ header span {
 .dropdown-content{
     display: none; /* vises ikke til hover er aktivert */
     position:absolute;/* relativ gjør at den strekker grid-en den er i . absolutt legger den over*/
-    background-color: #20ba90;
+    background-color: #04492D;
     z-index: 1; /* Legger den over andre deler */
     border-radius: 5px; /*Avrunnede hjørner */
   }
 .dropdown-content a { /* referer til "a" i html som blir brukt: <a href="[Link]">[Tekst som vises]</a> */
-    color: #441816;
+    color: #C09457;
     padding: 12px 16px;
     text-decoration: none; /* Denne overstyrer hvordan Dropbtn blir stilsatt når det har noe med "a" å gjøre */
     display:block;
     font-weight: bold;
 }
 .dropdown-content a:hover {
-    background-color: #441816;
-    color: #20ba90;
+    background-color: #C09457;
+    color: #04492D;
     border-radius: 0px; /*Avrunnede hjørner */
 }
 .dropdown:hover .dropdown-content {
@@ -85,10 +85,9 @@ header span {
 }
 
 body { /*bakgrunns farge/bilde plus all tekst i <body>*/
-    /*
-    background-image: url("ProjOne1.0/ProjOneImg/repeatable_background.png"); */
-    background-color: #441816;
-    color: white;
+    background-image: url(ProjOne1.0/ProjOneImg/MagicWood3.jpg);
+    background-size: 100%;
+    color: #e0e0e0;
 }
 
 .bold {
@@ -163,10 +162,10 @@ p1 {
 
 /*|| disse 2 gjør at alle divboksene splittes vekk fra hverandre og det blir ett lite åpentrom mellom de ||*/
 .grid div:nth-child(even)  {  
-    background-color: #111111;
+    background-color: #100500;
 }
 .grid div:nth-child(odd)  {
-    background-color: #111111;
+    background-color: #100500;
 }
 
 
